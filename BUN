@@ -1,13 +1,5 @@
   dmatrixbun <- function (X, M, U, V, k, a, log = FALSE) 
   {
-    if (!is.positive.definite(sigma)) 
-    stop("Matrix sigma is not positive-definite.")
-    if (!is.positive.definite(psi)) 
-    stop("Matrix psi is not positive-definite.")
-  if (nrow(mu) != nrow(sigma)) 
-    stop("Dimensions of mu and sigma are incorrect.")
-  if (ncol(mu) != ncol(psi)) 
-    stop("Dimensions of mu and psi are incorrect.")
     n <- nrow(X)
     r <- ncol(X)
     cKA <- (exp(k*a)*pnorm(k+a)+exp(-k*a)*pnorm(k-a))^(n*r)
